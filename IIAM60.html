@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto de Investigaciones Arqueológicas y Museo Prof. Mariano Gambier | 6 Salas Arqueológicas</title>
+    <link rel="stylesheet" href="MG60.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Controles de accesibilidad -->
+    <div class="accessibility-controls">
+        <button onclick="toggleContrast()" aria-label="Modo oscuro / alto contraste">
+            <i class="fas fa-adjust"></i>
+        </button>
+        <button onclick="toggleTextSize()" aria-label="Aumentar/reducir tamaño de letra">
+            <i class="fas fa-text-height"></i>
+        </button>
+    </div>
+   
+    <!-- Header con navegación -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo del museo">
+                <h1>Instituto de Investigaciones Arqueológicas y Museo Prof. Mariano Gambier
+                  <p class="subtitle"> Dependiente de la Facultad de Filosofía Humanidades y Artes-Universidad Nacional de San Juan</p> 
+                </h1>
+                
+            </div>
+           
+            
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>La Prehistoria de San Juan </h2>
+            <p>Explora nuestro Museo virtual con texto y audios Guías</p>
+            <a href="#salas" class="btn-primary">Comenzar recorrido</a>
+        </div>
+    </section>
+
+    <!-- Sección de salas -->
+    <main id="salas" class="salas-container">
+        <h2 class="section-title">Nuestras Salas</h2>
+        <p class="section-subtitle">Selecciona una sala para comenzar tu experiencia</p>
+
+        <!-- Grid de salas -->
+        <div class="salas-grid">
+            <!-- Sala 1-2 -->
+            <article class="sala-card" id="sala1-2">
+                <div class="sala-image">
+                    <img src="sala.jpeg" alt="Cultura Fortuna y Morrillos">
+                    <button class="audio-icon" onclick="toggleAudio('audio1')">
+                        <i class="fas fa-headphones"></i>
+                    </button>
+                    <audio id="audio1" src="sala 1-2.mp3"></audio>
+                </div>
+                <div class="sala-content">
+                    <span class="sala-number">Sala 1-2</span>
+                    <h3>Cultura Fortuna y Morrillos</h3>
+                    <p>Cazadores y recolectores</p>
+                    <button class="btn-secondary" onclick="mostrarModal('modal1')">Ver detalles</button>
+                </div>
+            </article>
+
+            <!-- Sala 3 -->
+            <article class="sala-card" id="sala3">
+                <div class="sala-image">
+                    <img src="ansilta.jpeg" alt="Cultura Ansilta">
+                    <button class="audio-icon" onclick="toggleAudio('audio2')">
+                        <i class="fas fa-headphones"></i>
+                    </button>
+                    <audio id="audio3" src="sala 3.mp3"></audio>
+                </div>
+                <div class="sala-content">
+                    <span class="sala-number">Sala 3</span>
+                    <h3>Cultura Ansilta</h3>
+                    <p>Primeros asentamientos</p>
+                    <button class="btn-secondary" onclick="mostrarModal('modal3')">Ver detalles</button>
+                </div>
+            </article>
+
+            <!-- Sala 4 -->
+            <article class="sala-card" id="sala4">
+                <div class="sala-image">
+                    <img src="sala4.jpeg" alt="Periodo Agropecuario Temprano y Medio">
+                    <button class="audio-icon" onclick="toggleAudio('audio4')">
+                        <i class="fas fa-headphones"></i>
+                    </button>
+                    <audio id="audio4" src="sala 4.mp3"></audio>
+                </div>
+                <div class="sala-content">
+                    <span class="sala-number">Sala 4</span>
+                    <h3>Periodo Agropecuario Temprano y Medio</h3>
+                    <p>Punta del Barro, Calingasta,Influencia Aguada </p>
+                    <button class="btn-secondary" onclick="mostrarModal('modal4')">Ver detalles</button>
+                </div>
+            </article>
+
+            <!-- Sala 5 -->
+            <article class="sala-card" id="sala5">
+                <div class="sala-image">
+                    <img src="sala5.jpeg" alt="Periodo Tardío">
+                    <button class="audio-icon" onclick="toggleAudio('audio5')">
+                        <i class="fas fa-headphones"></i>
+                    </button>
+                    <audio id="audio5" src="sala 5.mp3"></audio>
+                </div>
+                <div class="sala-content">
+                    <span class="sala-number">Sala 5</span>
+                    <h3>Periodo Tardío</h3>
+                    <p>Periodo agropecuario Tardío </p>
+                    <button class="btn-secondary" onclick="mostrarModal('modal5')">Ver detalles</button>
+                </div>
+            </article>
+
+            <!-- Sala 6 -->
+            <article class="sala-card" id="sala6">
+                <div class="sala-image">
+                    <img src="sala6.jpeg" alt="Angualasto">
+                    <button class="audio-icon" onclick="toggleAudio('audio6')">
+                        <i class="fas fa-headphones"></i>
+                    </button>
+                    <audio id="audio6" src="sala 6.mp3"></audio>
+                </div>
+                <div class="sala-content">
+                    <span class="sala-number">Sala 6 </span>
+                    <h3>Cultura Angualas</h3>
+                    <p>Desarrollos regionales</p>
+                    <button class="btn-secondary" onclick="mostrarModal('modal6')">Ver detalles</button>
+                </div>
+            </article>
+
+            <!-- Sala 7 -->
+            <article class="sala-card" id="sala7">
+                <div class="sala-image">
+                    <img src="sala7.jpeg" alt="Cultura Incaica">
+                    <button class="audio-icon" onclick="toggleAudio('audio7')">
+                        <i class="fas fa-headphones"></i>
+                    </button>
+                    <audio id="audio7" src="sala 7.mp3"></audio>
+                </div>
+                <div class="sala-content">
+                    <span class="sala-number">Sala 7</span>
+                    <h3>Cultura Incaica</h3>
+                    <p>El imperio en la región</p>
+                    <button class="btn-secondary" onclick="mostrarModal('modal7')">Ver detalles</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Modales para cada sala -->
+    <!-- Modal Sala 1-2 -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal('modal1')">&times;</span>
+            <h2>Cultura Fortuna y Morrillos</h2>
+            <p class="modal-subtitle">Cazadores y recolectores</p>
+            
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="sala.jpeg" alt="Cultura Fortuna y Morrillos">
+                    <button class="audio-btn" onclick="toggleAudio('audio1')">
+                        <i class="fas fa-headphones"></i> Escuchar audio guía
+                    </button>
+                </div>
+                <div class="modal-text">
+                    <p>Sala 1 y 2: En esta sala se exponen los restos arqueológicos de las dos culturas cazadoras recolectoras que habitaron el territorio de San Juan.Cultura Fortuna (6.500-6.000 –antes de Cristo),Cultura Morrillos (5.900-2.500- antes de Cristo)  </p>
+                    
+                    <h3>Cultura Fortuna Características principales:</h3>
+                    <ul>
+                        <li>Las evidencias arqueológicas se remontan a 8.500 años antes del presente, su probable permanencia  extiende a 300 años. </li>
+                        <li>Los grupos humanos de este periodo se alimentaban preferentemente con carne de guanaco</li>
+                        <li>frutos del algarrobo, raíces de cactus y otras semillas. De ellos se conservan líticos (o herramientas de piedra) representados por puntas para dardos y lanzas, empleados en la cacería y la defensa, también raspadores, cuchillos, sobadores, perforadores que utilizaban para  preparar tasajo (charque) y trabajar el cuero.</li>
+                     
+                    </ul>
+                    <h4>   Cultura Morrillos Características principales:</h4>
+                    <ul>
+                        <li>  Estos grupos permanecieron en el actual territorio de San Juan hasta hace aproximadamente 4.500 años. Entre los años 5.900 y 2.500 antes de Cristo. Se estima que hace 8.000 años (en el  6.000 antes de Cristo) comenzó a manifestarse un clima similar al actual, con sus características de árido de montaña y alternancias periódicas de años muy secos y otros algo más húmedos</li>
+                        <li>Estos grupos se desplazaban de manera similar sobre ambas bandas de la cordillera en el ambiente andino, moviéndose desde tierras bajas a tierras altas y viceversa, siguiendo el desplazamiento estacional de los guanacos. </li>
+                        <li>  Los valles interandinos más altos eran el punto de confluencia de los cazadores durante el verano, y la costa del océano Pacífico y los valles orientales más bajos, los puntos de refugio durante el invierno. Posiblemente hacia el año 2.500 antes de Cristo se replegaron hacia el sur del territorio de San Juan.  </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modales para cada sala -->
+    <!-- Modal Sala 3-->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal('modal3')">&times;</span>
+            <h2>Cultura Ansilata</h2>
+            <p class="modal-subtitle">Primeros asentamientos</p>
+            
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="ansilta.jpeg" alt="Cultura Ansilata">
+                    <button class="audio-btn" onclick="toggleAudio('audio3')">
+                        <i class="fas fa-headphones"></i> Escuchar audio guía
+                    </button>
+                </div>
+                <div class="modal-text">
+                    <p> Sala 3: Cultura Ansilta (1.800 -antes de cristo a 500 -después de Cristo)
+
+                    Hacia 1.800 antes de Cristo, grupos humanos con nuevos recursos económicos, ingresaron en nuestros valles andinos.</p>
+                    <h3>Características principales:</h3>
+                    <ul>
+                        <li>La agricultura y la ganadería se agregaron a la caza y la recolección de frutos naturales para facilitar la subsistencia. Pequeños predios ubicados excepcionalmente en microambientes especiales cerca de las zonas de cacería, permitieron el desarrollo de la agricultura en regiones donde las heladas quemaban cualquier tipo de cultivo. </li>
+                        <li>  Fue una agricultura incipiente, complementada con los productos de la cacería, la recolección de frutos silvestres y la ganadería de la llama. La gran frecuencia de hallazgos arqueológicos asignados a estos primeros agricultores en las faldas orientales de la cordillera de Ansilta, ha determinado su denominación como “cultura de Ansilta”.</li>
+                        <li>Es posible que el origen de gran parte de las características culturales de Ansilta estén en el Antiguo Perú. Dos mil años antes en ese lugar se había establecido el nuevo modo de vida que produjo un gran aumento de población, e impulsó migrantes que trajeron la agricultura y la ganadería a los confines más australes en el término de 3.500 años.</li>
+                    </ul>
+
+                 
+    
+                 
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modales para cada sala -->
+    <!-- Modal Sala 4 -->
+<div id="modal4" class="modal">
+    <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal('modal4')">&times;</span>
+            <h2>Periodo Agropecuario Temprano</h2>
+            <p class="modal-subtitle">Punta del Barro</p>
+            
+        <div class="modal-body">
+            <div class="modal-image">
+                    <img src="sala4.jpeg" alt="Periodo Agropecuario Temprano">
+                    <button class="audio-btn" onclick="toggleAudio('audio4')">
+                        <i class="fas fa-headphones"></i> Escuchar audio guía
+                     </button>
+                <div class="modal-text">
+                          <p> Sala 4: En esta sala se exhiben los restos arqueológicos de los grupos que corresponden a los periodos agropecuarios  temprano y medio de los valles de Iglesia y Calingasta. 
+
+                          - Fase Punta del Barro (50-580 d. C. después de Cristo) 
+
+                          - Cultura Calingasta (temprano 600-750 d.C. después de Cristo)  
+
+                          - Influencia Aguada (750-1.050 d.C. después de Cristo) 
+                         </p>
+                         <h4>Culturas:</h4>
+                          <ul>
+                         <li> Fase Punta del Barro: Entre los años 50 y 500 después de Cristo. las partes bajas del valle de Iglesia (al noroeste de San Juan) fueron ocupadas por grupos humanos procedentes del noroeste argentino. Estos se aculturaron con Ansilta formando el grupo humano que hemos denominado “Fase Punta del Barro”.  </li>
+                         <li>Cultura Calingasta temprana: La formación inicial de la cultura Calingasta data del año 580 después de Cristo cuando parte de algunos grupos de migrantes de la denominada “Fase Punta del Barro” de Iglesia, se fusionaron con la vecina tradición chilena conocida como “El Molle” en algún lugar de Calingasta.
+                         Esta tradición había llegado con anterioridad (desde los tiempos de la cultura Ansilta) aunque de manera muy débil. Los migrantes de último momento de la fase Punta del Barro se instalaron inicialmente en el sitio denominado Barrealito, en la parte más alta del valle del río Calingasta. 
+                         Desde allí, se desplazaron posteriormente sobre ambos márgenes del río,
+                          cultivando en sus márgenes, hasta llegar a su desembocadura en el río de Los Patos, en cuyo valle  se produjo la consolidación de los grupos.  </li>
+                         <li> Cultura Aguada: Hacia el año 750 después de Cristo entró por el norte de la provincia otro pueblo con tradiciones diferentes que cambió durante mucho tiempo el poblamiento de la región, incluyendo además del valle de Iglesia,  los de Jáchal y Calingasta hasta aproximadamente el año 1.250 después de Cristo.</li>
+                          <li>Esta fue la cultura de La Aguada. Los grupos preexistentes se aculturaron con los grupos Aguada, tomando de ellos los recursos más exitosos, y ellos aportando algunas de sus costumbres, entre las cuales sobresalen nuevas formas de realizar la alfarería y contribuciones en las técnicas textiles.  </li>
+                        </ul>                    
+                 </div>
+                </div>
+         </div>
+    </div>
+</div>
+<!-- Modales para cada sala -->
+<!-- Modal Sala 5 -->
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="cerrarModal('modal5')">&times;</span>
+        <h2>Periodo agropecuario Tardío </h2>
+        <p class="modal-subtitle">Periodo Tardío</p>
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="sala5.jpeg" alt="Periodo Tardío">
+                <button class="audio-btn" onclick="toggleAudio('audio5')">
+                    <i class="fas fa-headphones"></i> Escuchar audio guía
+                </button>
+            </div>
+            <div class="modal-text">
+                <p>Sala 5: Periodo agropecuario Tardío (1100-1490 d. C. después de Cristo)</p>
+                <h4>En esta sala se exponen dos de las tres culturas que habitaron el territorio de San Juan durante el denominado Periodo agropecuario Tardío, 
+                    la Cultura Calingasta (1100-1490 d. C.) y la Cultura Ullún-Zonda (1100-1490 d. C.)</h4>
+                <ul>
+                    <li>En Calingasta el periodo tardío desarrollado a partir de 1190 d. C. se caracterizó por el abandono de las costumbres aportadas por la cultura de La Aguada y la revitalización del modo de vida tradicional.</li>
+                    <li>En los sitios del valle central del San Juan, situados hacia el sur y hacia el este del Valle de Ullum-Zonda, es decir donde actualmente está el gran oasis que contiene a la ciudad de San Juan, se desarrolló la cultura Ullún-Zonda.</li>
+                    <li>Su similitud con las manifestaciones culturales de Calingasta, hacen que sea considerado como una prolongación hacia el este de los grupos formados en esa zona.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modales para cada sala -->
+<!-- Modal Sala 6 -->
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="cerrarModal('modal6')">&times;</span>
+        <h3>Cultura Angualasto</h3>
+        <p class="modal-subtitle">Desarrollos regionales</p>
+        
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="sala5.jpeg" alt="Cultura Angualasto">
+                <button class="audio-btn" onclick="toggleAudio('audio6')">
+                    <i class="fas fa-headphones"></i> Escuchar audio guía
+                </button>
+            </div>
+            <div class="modal-text">
+                <p>Sala 6: Cultura Angualasto (1100-1490 después de Cristo)</p>
+                <h4>En esta sala se expone la tercera cultura del denominado Periodo agropecuario Tardío, la cual se desarrolló en el norte de San Juan y fue denominada en acuerdo a su sitio representativo Angualasto en Iglesia.</h4>
+                <ul>
+                    <li>Se denomina “cultura de Angualasto” a las manifestaciones del período agropecuario tardío en el norte de la provincia de San Juan que se desarrolló entre los años 1200 y 1460 de nuestra era. Para realizar la agricultura aprovecharon los arroyos y ríos (principalmente el río Blanco-Jáchal) para el riego mediante importantes obras de ingeniería hidráulica. La alta producción que debió generarse de los campos de cultivo regados por este sistema hidráulico excedía las necesidades propias de los grupos, y probablemente fue exportada a otras regiones y comercializada a cambio de productos propios de ellas.</li>
+                    <li>Según las evidencias arqueológicas, este intercambio comercial fue realizado principalmente con zonas del norte de Chile y secundariamente con zonas del noroeste argentino. El traslado de productos exportados e importados se realizaba por medio de recuas de llamas que se criaban en las zonas de pasturas y en grandes corrales custodiados permanentemente. Vivían en instalaciones ganaderas consistentes en una o dos viviendas y un gran corral con muros de barro cerca del pastaje o en viviendas a lo largo de los campos de cultivo. El centro más importante estaba constituido por la aldea de Angualasto, que en la actualidad aún conserva restos de viviendas y corrales de distinto tipo. (Declarada Patrimonio de la Humanidad por la UNESCO).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modales para cada sala -->
+<!--Modal sala 7-->
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="cerrarModal('modal7')">&times;</span>
+        <h3>Cultura Incaica</h3>
+        <p class="modal-subtitle">El imperio en la región</p>
+        
+        <div class="modal-body">
+            <div class="modal-image">
+                <img src="sala7.jpeg" alt="Cultura Incaica">
+                <button class="audio-btn" onclick="toggleAudio('audio7')">
+                    <i class="fas fa-headphones"></i> Escuchar audio guía
+                </button>
+            </div>
+            <div class="modal-text">
+
+                <p>Sala 7: Dominación incaica (1490- 1530 después de Cristo)</p>
+                <h4>San Juan era ocupado por grupos humanos cuando llegó la invasión del imperio incaico hacia el año 1490. No se sabe si la sumisión de estos pueblos al conquistador fue pacífica o militar pero el hecho es que fueron dominados según lo indican los datos de las crónicas hispanas y la abundante cantidad de evidencias halladas en el territorio, desde construcciones y santuarios de altura, hasta vestimentas, objetos varios y fragmentos de la cerámica denominada imperial. </h4>
+                <ul>
+                    <li>LLos restos arqueológicos más notables son los correspondientes a los hallazgos de los santuarios de altura, tales como los del cerro El Toro, cerro Tambillos y cerro Mercedario que conforman un patrimonio excepcional. Son muy frecuentes, también las grandes construcciones o “tambos”, hechos de piedra, que constituían instalaciones de importancia situadas regiones de la cordillera.    </li>
+                    <li>Los incas incorporaron a su imperio a los pueblos angualastos, pero no los destruyeron ni los desplazaron. Por el contrario, los integraron a su organización política y económica, respetando sus costumbres y tradiciones. La cultura angualasta continuó existiendo como una cultura subordinada dentro del imperio incaico.</li>
+                    <li>La cultura incaica dejó una profunda huella en la historia de San Juan, y su legado cultural y arquitectónico aún se puede apreciar en la región.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Horarios</h4>
+                <p>Lunes a Viernes<br>8:00 am - 12:00 pm
+                    <br>14:00 pm - 18:00 pm </p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>iia@ffha.unsj.edu.ar.com<br>264474955</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/museogambier?igsh=Zmw0OGdicGtrenVw" target="_blank" rel="noopener">
+                        <i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; Instituto de Investigaciones Arqueológicas y Museo Prof. Mariano Gambier. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="MG601.js"></script>
+    
+</div>
+
+
+    
+</div>
+</body>
+</html>
